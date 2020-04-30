@@ -11,10 +11,15 @@
 typedef void (^MTKOperationResult) (BOOL success);
 typedef void (^MTKOperationCompletion) (BOOL success,NSArray *resultArr);
 
+/*
+ MTKJSONModel存储数据库 使用SQLite
+ */
+
 @interface MTKDBHandle : NSObject
 //获取单例
 +(instancetype)sharedDBHandle;
-@property (nonatomic,copy) NSString *DBPath;
+@property (nonatomic,readonly) NSString *DBPath;
+
 
 /*
 异步方法

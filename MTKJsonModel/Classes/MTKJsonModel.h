@@ -10,6 +10,7 @@
 #import <Foundation/Foundation.h>
 
 /*
+JSON转Model
 所有属性大小写不敏感
 */
 

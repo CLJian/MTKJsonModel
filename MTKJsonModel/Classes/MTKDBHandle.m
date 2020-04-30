@@ -6,6 +6,7 @@
 //  Copyright (c) 2020 CLJian. All rights reserved.
 //
 
+
 #import "MTKDBHandle.h"
 #import <sqlite3.h>
 #import "NSObject+MTKProperties.h"
@@ -15,6 +16,8 @@
 #define DBFloat @"real"
 #define DBData  @"blob"
 #define DBNoManage @"DBNoManage"
+
+#define DBDefaultName @"/DBDefaultName"
 
 @interface MTKModelPropertyType (MTKDBRelated)
 //将属性转化为简单的可存储的数据
@@ -120,6 +123,7 @@
 @end
 
 @implementation MTKDBHandle
+@synthesize DBPath = _DBPath;
 
 #pragma mark
 
@@ -135,6 +139,7 @@
 
 -(void)dealloc
 {
+     [self closeDB];
     [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
 
@@ -142,9 +147,17 @@
 {
     if (self = [super init]) {
         _checkedClassNameArray = [NSMutableArray array];
-        _dbHandleQueue = dispatch_queue_create("com.mtkdbhandle.queue", DISPATCH_QUEUE_SERIAL);
+        //使用并行队列 对数据库修改放异步栅栏函数 读异步并行读取
+        _dbHandleQueue = dispatch_queue_create("com.mtkdbhandle.queue", DISPATCH_QUEUE_CONCURRENT);
+        NSString*path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES) firstObject];
+
+        NSString* defaultName = [path stringByAppendingString:DBDefaultName];
+        
+        _DBPath = defaultName;
+        
+        [self openDB];
 #ifdef DEBUG
-        NSLog(@"DB%@",self.DBPath);
+        NSLog(@"default DB%@",_DBPath);
 #endif
     }
     return self;
@@ -156,11 +169,11 @@
 {
     NSString *dbPath = self.DBPath ;
 
-    int flags = SQLITE_OPEN_READWRITE;
+    int flags = SQLITE_OPEN_READWRITE | SQLITE_OPEN_FULLMUTEX;
     if ([[NSFileManager defaultManager] fileExistsAtPath:dbPath]) {
-        flags = SQLITE_OPEN_READWRITE;
+        flags = SQLITE_OPEN_READWRITE | SQLITE_OPEN_FULLMUTEX;
     } else {
-        flags = SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE;
+        flags = SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE | SQLITE_OPEN_FULLMUTEX;
     }
     if (self.isDBOpen) {
         return YES;
@@ -208,9 +221,6 @@
 }
 //所有表名
 -(NSArray *)sqlite_tablename {
-//    if (!self.isDBOpen) {
-//        [self openDB];
-//    }
     sqlite3_stmt *stmt = NULL;
     NSMutableArray *tablenameArray = [[NSMutableArray alloc] init];
     NSString *str = [NSString stringWithFormat:@"select name from sqlite_master where type='table'"];
@@ -223,15 +233,11 @@
     }
     sqlite3_finalize(stmt);
     stmt = NULL;
-//    [self closeDB];
     return tablenameArray;
 }
 //单表列名
 -(NSArray *)sqlite_columnNamesArrayWithTableName:(NSString*)tableName
 {
-//    if (!self.isDBOpen) {
-//        [self openDB];
-//    }
     sqlite3_stmt *stmt = NULL;
     NSMutableArray *columnNamesArray = [[NSMutableArray alloc] init];
     NSString *str = [NSString stringWithFormat:@"PRAGMA table_info(%@)",tableName];
@@ -245,7 +251,7 @@
     }
     sqlite3_finalize(stmt);
     stmt = NULL;
-//    [self closeDB];
+
     return columnNamesArray;
 }
 //表是否存在
@@ -261,19 +267,14 @@
 //创建表
 - (void)createDbTable:(Class)aClass andTableKey:(NSString*)key;
 {
-//    if (!self.isDBOpen) {
-//        [self openDB];
-//    }
-    
+
     NSString *tableName = [self tableNameWithClass:aClass andtableKey:key];
     
     if ([self sqlite_tableExistWithTableName:tableName]) {
         //数据库表已存在
         return;
     }
-//    if (!self.isDBOpen) {
-//        [self openDB];
-//    }
+
     NSMutableString *sql = [NSMutableString stringWithCapacity:0];
     [sql appendString:@"create table "];
     [sql appendString:tableName];
@@ -309,7 +310,7 @@
         fprintf(stderr,"create table fail: %s\n",errmsg);
     }
     sqlite3_free(errmsg);
-//    [self closeDB];
+
 }
 //更新表内容
 -(void)updateTableContentWithClass:(Class)aClass andTableKey:(NSString*)tableKey
@@ -383,9 +384,7 @@
         }
     }
     if (sqlString.length) {
-//        if (![self isDBOpen]) {
-//            [self openDB];
-//        }
+
         sqlite3 *sqlite3DB = self.sqlite3DB;
         char *errmsg = 0;
         int ret = sqlite3_exec(sqlite3DB, [sqlString UTF8String], NULL, NULL, &errmsg);
@@ -394,15 +393,12 @@
         }
         sqlite3_free(errmsg);
     }
-//    [self closeDB];
+
 }
 
 //删除表
 -(BOOL)removeTableWithName:(NSString*)tableName
 {
-//    if (![self isDBOpen]) {
-//        [self openDB];
-//    }
     NSMutableString *sql = [NSMutableString stringWithCapacity:0];
     [sql appendString:@"drop table "];
     [sql appendString:tableName];
@@ -413,7 +409,6 @@
         fprintf(stderr,"drop table fail: %s\n",errmsg);
     }
     sqlite3_free(errmsg);
-//    [self closeDB];
     return YES;
 }
 
@@ -460,9 +455,7 @@
         [self updateTableContentWithClass:[object class] andTableKey:tableKey];
     }
     NSArray *culumns = [self sqlite_columnNamesArrayWithTableName:tableName];
-//    if (!self.isDBOpen) {
-//        [self openDB];
-//    }
+
     NSDictionary *propertyDic = [[object class]mtkCachedProperties];
     
     NSMutableString *sql_NSString = [[NSMutableString alloc] initWithFormat:@"insert or replace into %@ values(?)", tableName];
@@ -522,13 +515,11 @@
             fprintf(stderr,"save object fail: %s\n",errmsg);
             sqlite3_finalize(stmt);
             stmt = NULL;
-//            [self closeDB];
             return NO;
         }
     }
     sqlite3_finalize(stmt);
     stmt = NULL;
-//    [self closeDB];
     return YES;
 }
 
@@ -555,9 +546,7 @@
     if (!aClass) {
         return nil;
     }
-//    if (![self isDBOpen]) {
-//        [self openDB];
-//    }
+    
     sqlite3_stmt *stmt = NULL;
     NSMutableArray *array = [NSMutableArray array];
     NSMutableString *selectstring = nil;
@@ -642,7 +631,6 @@
     }
     sqlite3_finalize(stmt);
     stmt = NULL;
-//    [self closeDB];
     return array;
 }
 
@@ -660,9 +648,7 @@
         return YES;
     }
     NSString *sqlString = [NSString stringWithFormat:@"delete from %@ where %@",tableName,condition];
-//    if (![self isDBOpen]) {
-//        [self openDB];
-//    }
+
     const char *errmsg = 0;
     sqlite3 *sqlite3DB = self.sqlite3DB;
     sqlite3_stmt *stmt = NULL;
@@ -685,12 +671,10 @@
 //删除类对应的tableKey的表
 -(void)removeDbTableWithClassName:(NSString*)className andTableKey:(NSString*)tableKey andCompletion:(MTKOperationResult)completion
 {
-    dispatch_async(_dbHandleQueue, ^{
-        if (![self isDBOpen]) {
-            [self openDB];
-        }
+    dispatch_barrier_async(_dbHandleQueue, ^{
+
         BOOL success = [self removeDbTableWithClassName:className andTableKey:tableKey];
-        [self closeDB];
+   
         dispatch_async(dispatch_get_main_queue(), ^{
             if (completion) {
                 completion(success);
@@ -701,12 +685,10 @@
 //删除类对应的所有表
 -(void)removeAllTableWithClassName:(NSString*)className andCompletion:(MTKOperationResult)completion
 {
-    dispatch_async(_dbHandleQueue, ^{
-        if (![self isDBOpen]) {
-            [self openDB];
-        }
+    dispatch_barrier_async(_dbHandleQueue, ^{
+
         BOOL success = [self removeAllTableWithClassName:className];
-        [self closeDB];
+
         dispatch_async(dispatch_get_main_queue(), ^{
             if (completion) {
                 completion(success);
@@ -717,12 +699,10 @@
 //删除类相关条件的数据 条件为all的时候删除表 为空不处理 condition例 all删除所有 id=930删除id为930的对象
 -(void)removeObjectWithClass:(Class)aClass andTableKey:(NSString*)tableKey withCondition:(NSString*)condition andCompletion:(MTKOperationResult)completion
 {
-    dispatch_async(_dbHandleQueue, ^{
-        if (![self isDBOpen]) {
-            [self openDB];
-        }
+    dispatch_barrier_async(_dbHandleQueue, ^{
+
         BOOL success = [self removeObjectWithClass:aClass andTableKey:tableKey withCondition:condition];
-        [self closeDB];
+    
         dispatch_async(dispatch_get_main_queue(), ^{
             if (completion) {
                 completion(success);
@@ -733,12 +713,10 @@
 //存储对象 以类名和tableKey作为表名
 -(void)saveRowWithObject:(id)object withTableKey:(NSString*)tableKey andCompletion:(MTKOperationResult)completion
 {
-    dispatch_async(_dbHandleQueue, ^{
-        if (![self isDBOpen]) {
-            [self openDB];
-        }
+    dispatch_barrier_async(_dbHandleQueue, ^{
+
         BOOL success = [self saveRowWithObject:object withTableKey:tableKey];
-        [self closeDB];
+        
         dispatch_async(dispatch_get_main_queue(), ^{
             if (completion) {
                 completion(success);
@@ -746,15 +724,14 @@
         });
     });
 }
+
 //现在只支持单类型的存储，以首个对象的类型为准
 -(void)saveObjects:(NSArray*)objectsArray withTableKey:(NSString*)tableKey andCompletion:(MTKOperationResult)completion
 {
-    dispatch_async(_dbHandleQueue, ^{
-        if (![self isDBOpen]) {
-            [self openDB];
-        }
+    dispatch_barrier_async(_dbHandleQueue, ^{
+
         BOOL success = [self saveObjects:objectsArray withTableKey:tableKey];
-        [self closeDB];
+
         dispatch_async(dispatch_get_main_queue(), ^{
             if (completion) {
                 completion(success);
@@ -766,11 +743,7 @@
 -(void)selectDbObjects:(Class)aClass condition:(NSString *)condition orderby:(NSString *)orderby withTableKey:(NSString*)tableKey andCompletion:(MTKOperationCompletion)completion
 {
     dispatch_async(_dbHandleQueue, ^{
-        if (![self isDBOpen]) {
-            [self openDB];
-        }
         NSArray* resultsArr = [self selectDbObjects:aClass condition:condition orderby:orderby withTableKey:tableKey];
-        [self closeDB];
         dispatch_async(dispatch_get_main_queue(), ^{
             if (completion) {
                 completion(!!resultsArr,resultsArr);
