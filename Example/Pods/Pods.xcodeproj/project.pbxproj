@@ -1,0 +1,792 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		08E94060B4C434792D32696D3E85D721 /* NSObject+MTKProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = B55F4CBC5F8C8491D15FB65D2A3D66A1 /* NSObject+MTKProperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0993BA31FDA1764A720846A1070E7411 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		2FAD70D52DC3B9248EF366843B919825 /* MTKDBHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE59ECFF8681607A0625576AE5F145 /* MTKDBHandle.m */; };
+		52506364B12DEC387C4E3B570C048A10 /* MTKDBHandle.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A2210F37AC4680A4DAB951777357D3C /* MTKDBHandle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5250D549811C1F311558DC0DEF66513A /* MTKJsonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F4C88622D1B200E1CAAA226163F67C /* MTKJsonModel.m */; };
+		5A1917465E737D676569A90BE869E4D4 /* MTKJsonModel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 05EEB10BBAFFC8E700E55D5975CB8A4F /* MTKJsonModel-dummy.m */; };
+		61BDBE644E55BF9DFA3C47380E4BC68B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		68C618038F385AC5C5B32BD7F7417D5D /* Pods-MTKJsonModel_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C3C4F4FB39BCCCEF652C2C47CDD351F /* Pods-MTKJsonModel_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7A4DBF3EA4107D4220A401EF2B50931E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		8B4AFF1F8AE1ACBA6F9C542A551694F6 /* Pods-MTKJsonModel_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E381237F1F1D9446914364B0A5D8960 /* Pods-MTKJsonModel_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8CE78614F5F6116701EF9CB851628659 /* MTKJsonModel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D93298989263D656C8EC5FF18C85AB7D /* MTKJsonModel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		913AC8DAF9C0CF4F5FFC76C21374AE00 /* Pods-MTKJsonModel_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CBD418AFC50D8B45B01E66F3B602FA /* Pods-MTKJsonModel_Tests-dummy.m */; };
+		A0E8CA2AE26FEFD0D58A15ADE9C1BD70 /* NSObject+MTKProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CA0499D93B71435D3AF3B260DBB921 /* NSObject+MTKProperties.m */; };
+		A993E7EFAAB4CD97EDCFC4CF4BC96A75 /* Pods-MTKJsonModel_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DC2147555CACF71F8D2F59EC6B44AF /* Pods-MTKJsonModel_Example-dummy.m */; };
+		C3A992EBC78AA0D9591CD31D012DD464 /* MTKJsonModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C9F9051BF363257E9662DFF3D7FF4B4 /* MTKJsonModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		453DBEDA7B559CBF32A602B9BBA0F1D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0496BC8D47BC9C786FAA300204E07E7B;
+			remoteInfo = MTKJsonModel;
+		};
+		BE37D92A61779AB63FE61DC4DD3D7312 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D8A6D37BA5598696F246F01E68C362A6;
+			remoteInfo = "Pods-MTKJsonModel_Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05CF10761DC69367C3F4D54BE2C5B947 /* Pods_MTKJsonModel_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MTKJsonModel_Tests.framework; path = "Pods-MTKJsonModel_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		05EEB10BBAFFC8E700E55D5975CB8A4F /* MTKJsonModel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MTKJsonModel-dummy.m"; sourceTree = "<group>"; };
+		0D38C8189FF4DDBA35D8BA608C3309C7 /* Pods-MTKJsonModel_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MTKJsonModel_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		12F6AE4288E6EB87C29140F5FCECD8B0 /* Pods_MTKJsonModel_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MTKJsonModel_Example.framework; path = "Pods-MTKJsonModel_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		14879C95407EC35F4B13DC526DF8C229 /* MTKJsonModel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MTKJsonModel-prefix.pch"; sourceTree = "<group>"; };
+		186890CF4DE201DEDBE5DE70EF26A8FE /* Pods-MTKJsonModel_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MTKJsonModel_Example-Info.plist"; sourceTree = "<group>"; };
+		1C7EE5666267535B8C8D08E512CD02A9 /* Pods-MTKJsonModel_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MTKJsonModel_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		2C3C4F4FB39BCCCEF652C2C47CDD351F /* Pods-MTKJsonModel_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MTKJsonModel_Tests-umbrella.h"; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		42656B04768C7CBEA666696D59BA5E1D /* Pods-MTKJsonModel_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MTKJsonModel_Example.release.xcconfig"; sourceTree = "<group>"; };
+		42DD07094E08D16E90D5A60453FF1837 /* Pods-MTKJsonModel_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MTKJsonModel_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		4DE7DAA98B3333B131927A53924E234B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		55B7E8308F470D668C0B1C188F07CAE9 /* MTKJsonModel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MTKJsonModel.release.xcconfig; sourceTree = "<group>"; };
+		565585B70476000CFA4B08DFC3908E85 /* MTKJsonModel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MTKJsonModel.debug.xcconfig; sourceTree = "<group>"; };
+		59AB930307F94A1EB7B38FF2C439BC04 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		5C9F9051BF363257E9662DFF3D7FF4B4 /* MTKJsonModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MTKJsonModel.h; path = MTKJsonModel/Classes/MTKJsonModel.h; sourceTree = "<group>"; };
+		5F168BF797465EA23C1EC467EF140A70 /* Pods-MTKJsonModel_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MTKJsonModel_Example-frameworks.sh"; sourceTree = "<group>"; };
+		65CA0499D93B71435D3AF3B260DBB921 /* NSObject+MTKProperties.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MTKProperties.m"; path = "MTKJsonModel/Classes/NSObject+MTKProperties.m"; sourceTree = "<group>"; };
+		6BFE59ECFF8681607A0625576AE5F145 /* MTKDBHandle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MTKDBHandle.m; path = MTKJsonModel/Classes/MTKDBHandle.m; sourceTree = "<group>"; };
+		738B805517C06C70E68BEE94C6F1951B /* Pods-MTKJsonModel_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MTKJsonModel_Tests.modulemap"; sourceTree = "<group>"; };
+		73C53FE6F82AD515B8CBD4673D4A256B /* MTKJsonModel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MTKJsonModel.modulemap; sourceTree = "<group>"; };
+		78CBD418AFC50D8B45B01E66F3B602FA /* Pods-MTKJsonModel_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MTKJsonModel_Tests-dummy.m"; sourceTree = "<group>"; };
+		8A2210F37AC4680A4DAB951777357D3C /* MTKDBHandle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MTKDBHandle.h; path = MTKJsonModel/Classes/MTKDBHandle.h; sourceTree = "<group>"; };
+		8C70528C42160274C080B1A1AECF7D24 /* MTKJsonModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MTKJsonModel.framework; path = MTKJsonModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DE56851C0A016C8558401F0FF32EE93 /* Pods-MTKJsonModel_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MTKJsonModel_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E381237F1F1D9446914364B0A5D8960 /* Pods-MTKJsonModel_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MTKJsonModel_Example-umbrella.h"; sourceTree = "<group>"; };
+		A40F17C8C0CF6E822FFFA8BA9DF87150 /* Pods-MTKJsonModel_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MTKJsonModel_Tests-Info.plist"; sourceTree = "<group>"; };
+		B55F4CBC5F8C8491D15FB65D2A3D66A1 /* NSObject+MTKProperties.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MTKProperties.h"; path = "MTKJsonModel/Classes/NSObject+MTKProperties.h"; sourceTree = "<group>"; };
+		B6F4C88622D1B200E1CAAA226163F67C /* MTKJsonModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MTKJsonModel.m; path = MTKJsonModel/Classes/MTKJsonModel.m; sourceTree = "<group>"; };
+		B7F795E4014ADFB0FB09B570D2762E4E /* Pods-MTKJsonModel_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MTKJsonModel_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C728D224F39A25977F8D2212A5177E60 /* Pods-MTKJsonModel_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MTKJsonModel_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D04C5F9AC32A787B74C45BFF7DA4DBB2 /* MTKJsonModel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MTKJsonModel-Info.plist"; sourceTree = "<group>"; };
+		D93298989263D656C8EC5FF18C85AB7D /* MTKJsonModel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MTKJsonModel-umbrella.h"; sourceTree = "<group>"; };
+		E726D7BA3DC77BD17285211A87853AC6 /* Pods-MTKJsonModel_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MTKJsonModel_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		E77D883F7058A2AB3CF9F64AF393D59B /* MTKJsonModel.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = MTKJsonModel.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F928C89E99F1138AC9749AA9182680A6 /* Pods-MTKJsonModel_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MTKJsonModel_Example.modulemap"; sourceTree = "<group>"; };
+		F9DC2147555CACF71F8D2F59EC6B44AF /* Pods-MTKJsonModel_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MTKJsonModel_Example-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C768F0AF64A2980BBD8535C911E1850B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61BDBE644E55BF9DFA3C47380E4BC68B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7E10FD9D51482C2C6E80DEA5A193E33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A4DBF3EA4107D4220A401EF2B50931E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE74EBC8E2FD1C4E1042C3DB606D3D03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0993BA31FDA1764A720846A1070E7411 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		347705BF24DA22E124C265F779AC355C /* MTKJsonModel */ = {
+			isa = PBXGroup;
+			children = (
+				8A2210F37AC4680A4DAB951777357D3C /* MTKDBHandle.h */,
+				6BFE59ECFF8681607A0625576AE5F145 /* MTKDBHandle.m */,
+				5C9F9051BF363257E9662DFF3D7FF4B4 /* MTKJsonModel.h */,
+				B6F4C88622D1B200E1CAAA226163F67C /* MTKJsonModel.m */,
+				B55F4CBC5F8C8491D15FB65D2A3D66A1 /* NSObject+MTKProperties.h */,
+				65CA0499D93B71435D3AF3B260DBB921 /* NSObject+MTKProperties.m */,
+				D7E496A9D2160B7E8341A43C3E576EDE /* Pod */,
+				A172F2DA99C9EBB103D200ED66494EFB /* Support Files */,
+			);
+			name = MTKJsonModel;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		50B5C7A4FBA9E378203046A62D9615CB /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				347705BF24DA22E124C265F779AC355C /* MTKJsonModel */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		666E777C543DE42E20F35919210081B1 /* Pods-MTKJsonModel_Example */ = {
+			isa = PBXGroup;
+			children = (
+				F928C89E99F1138AC9749AA9182680A6 /* Pods-MTKJsonModel_Example.modulemap */,
+				C728D224F39A25977F8D2212A5177E60 /* Pods-MTKJsonModel_Example-acknowledgements.markdown */,
+				0D38C8189FF4DDBA35D8BA608C3309C7 /* Pods-MTKJsonModel_Example-acknowledgements.plist */,
+				F9DC2147555CACF71F8D2F59EC6B44AF /* Pods-MTKJsonModel_Example-dummy.m */,
+				5F168BF797465EA23C1EC467EF140A70 /* Pods-MTKJsonModel_Example-frameworks.sh */,
+				186890CF4DE201DEDBE5DE70EF26A8FE /* Pods-MTKJsonModel_Example-Info.plist */,
+				9E381237F1F1D9446914364B0A5D8960 /* Pods-MTKJsonModel_Example-umbrella.h */,
+				E726D7BA3DC77BD17285211A87853AC6 /* Pods-MTKJsonModel_Example.debug.xcconfig */,
+				42656B04768C7CBEA666696D59BA5E1D /* Pods-MTKJsonModel_Example.release.xcconfig */,
+			);
+			name = "Pods-MTKJsonModel_Example";
+			path = "Target Support Files/Pods-MTKJsonModel_Example";
+			sourceTree = "<group>";
+		};
+		696E28C6F4FB83346E5900062CF78202 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				666E777C543DE42E20F35919210081B1 /* Pods-MTKJsonModel_Example */,
+				6CFE8C9190702D7787A5C9F355D3C34C /* Pods-MTKJsonModel_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		6CFE8C9190702D7787A5C9F355D3C34C /* Pods-MTKJsonModel_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				738B805517C06C70E68BEE94C6F1951B /* Pods-MTKJsonModel_Tests.modulemap */,
+				B7F795E4014ADFB0FB09B570D2762E4E /* Pods-MTKJsonModel_Tests-acknowledgements.markdown */,
+				8DE56851C0A016C8558401F0FF32EE93 /* Pods-MTKJsonModel_Tests-acknowledgements.plist */,
+				78CBD418AFC50D8B45B01E66F3B602FA /* Pods-MTKJsonModel_Tests-dummy.m */,
+				A40F17C8C0CF6E822FFFA8BA9DF87150 /* Pods-MTKJsonModel_Tests-Info.plist */,
+				2C3C4F4FB39BCCCEF652C2C47CDD351F /* Pods-MTKJsonModel_Tests-umbrella.h */,
+				42DD07094E08D16E90D5A60453FF1837 /* Pods-MTKJsonModel_Tests.debug.xcconfig */,
+				1C7EE5666267535B8C8D08E512CD02A9 /* Pods-MTKJsonModel_Tests.release.xcconfig */,
+			);
+			name = "Pods-MTKJsonModel_Tests";
+			path = "Target Support Files/Pods-MTKJsonModel_Tests";
+			sourceTree = "<group>";
+		};
+		81FBF70C664EB4EA864685FEEC82B783 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8C70528C42160274C080B1A1AECF7D24 /* MTKJsonModel.framework */,
+				12F6AE4288E6EB87C29140F5FCECD8B0 /* Pods_MTKJsonModel_Example.framework */,
+				05CF10761DC69367C3F4D54BE2C5B947 /* Pods_MTKJsonModel_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A172F2DA99C9EBB103D200ED66494EFB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				73C53FE6F82AD515B8CBD4673D4A256B /* MTKJsonModel.modulemap */,
+				05EEB10BBAFFC8E700E55D5975CB8A4F /* MTKJsonModel-dummy.m */,
+				D04C5F9AC32A787B74C45BFF7DA4DBB2 /* MTKJsonModel-Info.plist */,
+				14879C95407EC35F4B13DC526DF8C229 /* MTKJsonModel-prefix.pch */,
+				D93298989263D656C8EC5FF18C85AB7D /* MTKJsonModel-umbrella.h */,
+				565585B70476000CFA4B08DFC3908E85 /* MTKJsonModel.debug.xcconfig */,
+				55B7E8308F470D668C0B1C188F07CAE9 /* MTKJsonModel.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/MTKJsonModel";
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				50B5C7A4FBA9E378203046A62D9615CB /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				81FBF70C664EB4EA864685FEEC82B783 /* Products */,
+				696E28C6F4FB83346E5900062CF78202 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D7E496A9D2160B7E8341A43C3E576EDE /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				4DE7DAA98B3333B131927A53924E234B /* LICENSE */,
+				E77D883F7058A2AB3CF9F64AF393D59B /* MTKJsonModel.podspec */,
+				59AB930307F94A1EB7B38FF2C439BC04 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6A1C18F4942D058F530467176F5F4A42 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68C618038F385AC5C5B32BD7F7417D5D /* Pods-MTKJsonModel_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92E9EA6B676FE3E5F09BED96B008BBC0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52506364B12DEC387C4E3B570C048A10 /* MTKDBHandle.h in Headers */,
+				8CE78614F5F6116701EF9CB851628659 /* MTKJsonModel-umbrella.h in Headers */,
+				C3A992EBC78AA0D9591CD31D012DD464 /* MTKJsonModel.h in Headers */,
+				08E94060B4C434792D32696D3E85D721 /* NSObject+MTKProperties.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2E7A8D111B3846EBB69A1D7F66AFDA9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B4AFF1F8AE1ACBA6F9C542A551694F6 /* Pods-MTKJsonModel_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0496BC8D47BC9C786FAA300204E07E7B /* MTKJsonModel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8121D25509BA62363503189837F94D90 /* Build configuration list for PBXNativeTarget "MTKJsonModel" */;
+			buildPhases = (
+				92E9EA6B676FE3E5F09BED96B008BBC0 /* Headers */,
+				9898570118B61690833182342F9067AF /* Sources */,
+				FE74EBC8E2FD1C4E1042C3DB606D3D03 /* Frameworks */,
+				6CA437E8144A93DA7833E4B419CB33E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MTKJsonModel;
+			productName = MTKJsonModel;
+			productReference = 8C70528C42160274C080B1A1AECF7D24 /* MTKJsonModel.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9F9BFD47EE1E5AF3FB636C287E3DC9A7 /* Pods-MTKJsonModel_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F655DFA6DE5E4E025A9EA3662EB723EC /* Build configuration list for PBXNativeTarget "Pods-MTKJsonModel_Tests" */;
+			buildPhases = (
+				6A1C18F4942D058F530467176F5F4A42 /* Headers */,
+				999832271246102C3D610872BF7128F2 /* Sources */,
+				E7E10FD9D51482C2C6E80DEA5A193E33 /* Frameworks */,
+				BEE16E17FB166002EF14F19F8FD9A9C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3CC8313351B19C7A52CB242139D3FE49 /* PBXTargetDependency */,
+			);
+			name = "Pods-MTKJsonModel_Tests";
+			productName = "Pods-MTKJsonModel_Tests";
+			productReference = 05CF10761DC69367C3F4D54BE2C5B947 /* Pods_MTKJsonModel_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D8A6D37BA5598696F246F01E68C362A6 /* Pods-MTKJsonModel_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 725051E63318724B38135F41BC9F68CC /* Build configuration list for PBXNativeTarget "Pods-MTKJsonModel_Example" */;
+			buildPhases = (
+				A2E7A8D111B3846EBB69A1D7F66AFDA9 /* Headers */,
+				392211B5A4B3A8382D27147B54E00D95 /* Sources */,
+				C768F0AF64A2980BBD8535C911E1850B /* Frameworks */,
+				B9F678A46145EDF1206731FC9B465C8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F8AE66E9CABBF414F30CB3E17A5D792 /* PBXTargetDependency */,
+			);
+			name = "Pods-MTKJsonModel_Example";
+			productName = "Pods-MTKJsonModel_Example";
+			productReference = 12F6AE4288E6EB87C29140F5FCECD8B0 /* Pods_MTKJsonModel_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 81FBF70C664EB4EA864685FEEC82B783 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0496BC8D47BC9C786FAA300204E07E7B /* MTKJsonModel */,
+				D8A6D37BA5598696F246F01E68C362A6 /* Pods-MTKJsonModel_Example */,
+				9F9BFD47EE1E5AF3FB636C287E3DC9A7 /* Pods-MTKJsonModel_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6CA437E8144A93DA7833E4B419CB33E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9F678A46145EDF1206731FC9B465C8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEE16E17FB166002EF14F19F8FD9A9C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		392211B5A4B3A8382D27147B54E00D95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A993E7EFAAB4CD97EDCFC4CF4BC96A75 /* Pods-MTKJsonModel_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9898570118B61690833182342F9067AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FAD70D52DC3B9248EF366843B919825 /* MTKDBHandle.m in Sources */,
+				5A1917465E737D676569A90BE869E4D4 /* MTKJsonModel-dummy.m in Sources */,
+				5250D549811C1F311558DC0DEF66513A /* MTKJsonModel.m in Sources */,
+				A0E8CA2AE26FEFD0D58A15ADE9C1BD70 /* NSObject+MTKProperties.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		999832271246102C3D610872BF7128F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				913AC8DAF9C0CF4F5FFC76C21374AE00 /* Pods-MTKJsonModel_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3CC8313351B19C7A52CB242139D3FE49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-MTKJsonModel_Example";
+			target = D8A6D37BA5598696F246F01E68C362A6 /* Pods-MTKJsonModel_Example */;
+			targetProxy = BE37D92A61779AB63FE61DC4DD3D7312 /* PBXContainerItemProxy */;
+		};
+		9F8AE66E9CABBF414F30CB3E17A5D792 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MTKJsonModel;
+			target = 0496BC8D47BC9C786FAA300204E07E7B /* MTKJsonModel */;
+			targetProxy = 453DBEDA7B559CBF32A602B9BBA0F1D9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		49B57E84DE403801876E63465ECA1400 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55B7E8308F470D668C0B1C188F07CAE9 /* MTKJsonModel.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MTKJsonModel/MTKJsonModel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MTKJsonModel/MTKJsonModel-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MTKJsonModel/MTKJsonModel.modulemap";
+				PRODUCT_MODULE_NAME = MTKJsonModel;
+				PRODUCT_NAME = MTKJsonModel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4BE66A09A74FD25164AAB3C2645B9B93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		65C5147CD93ED222CC86609B25437ED2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42DD07094E08D16E90D5A60453FF1837 /* Pods-MTKJsonModel_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MTKJsonModel_Tests/Pods-MTKJsonModel_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MTKJsonModel_Tests/Pods-MTKJsonModel_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		746DC5C8CF9E3F929F1CEF9BF22B6FD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 565585B70476000CFA4B08DFC3908E85 /* MTKJsonModel.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MTKJsonModel/MTKJsonModel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MTKJsonModel/MTKJsonModel-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MTKJsonModel/MTKJsonModel.modulemap";
+				PRODUCT_MODULE_NAME = MTKJsonModel;
+				PRODUCT_NAME = MTKJsonModel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7EF7227D9B20A1D549000096ACCB23D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		CD9C70338B3EA8FC16EECFB2389F95C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E726D7BA3DC77BD17285211A87853AC6 /* Pods-MTKJsonModel_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MTKJsonModel_Example/Pods-MTKJsonModel_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MTKJsonModel_Example/Pods-MTKJsonModel_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E79142D01518B60D7348A4731F23C141 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42656B04768C7CBEA666696D59BA5E1D /* Pods-MTKJsonModel_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MTKJsonModel_Example/Pods-MTKJsonModel_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MTKJsonModel_Example/Pods-MTKJsonModel_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FB2635C0D8C30A95E9BCC53A65D200DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C7EE5666267535B8C8D08E512CD02A9 /* Pods-MTKJsonModel_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MTKJsonModel_Tests/Pods-MTKJsonModel_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MTKJsonModel_Tests/Pods-MTKJsonModel_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EF7227D9B20A1D549000096ACCB23D7 /* Debug */,
+				4BE66A09A74FD25164AAB3C2645B9B93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		725051E63318724B38135F41BC9F68CC /* Build configuration list for PBXNativeTarget "Pods-MTKJsonModel_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD9C70338B3EA8FC16EECFB2389F95C5 /* Debug */,
+				E79142D01518B60D7348A4731F23C141 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8121D25509BA62363503189837F94D90 /* Build configuration list for PBXNativeTarget "MTKJsonModel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				746DC5C8CF9E3F929F1CEF9BF22B6FD5 /* Debug */,
+				49B57E84DE403801876E63465ECA1400 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F655DFA6DE5E4E025A9EA3662EB723EC /* Build configuration list for PBXNativeTarget "Pods-MTKJsonModel_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65C5147CD93ED222CC86609B25437ED2 /* Debug */,
+				FB2635C0D8C30A95E9BCC53A65D200DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

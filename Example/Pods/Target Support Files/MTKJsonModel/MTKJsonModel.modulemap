@@ -1,0 +1,6 @@
+framework module MTKJsonModel {
+  umbrella header "MTKJsonModel-umbrella.h"
+
+  export *
+  module * { export * }
+}

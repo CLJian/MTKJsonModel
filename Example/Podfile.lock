@@ -1,0 +1,16 @@
+PODS:
+  - MTKJsonModel (0.1.0)
+
+DEPENDENCIES:
+  - MTKJsonModel (from `../`)
+
+EXTERNAL SOURCES:
+  MTKJsonModel:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MTKJsonModel: 5bc71edb4169e76af1a4d6f08731c383d775a619
+
+PODFILE CHECKSUM: 4e6887046daa7edeab8d14cffca7708fa355f53b
+
+COCOAPODS: 1.9.1
